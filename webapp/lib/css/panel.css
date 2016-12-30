@@ -1,0 +1,369 @@
+/**
+定义设备信息和地图相关信息的样式
+*/
+body, html, #allmap {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+    font-family: "Helvetica Neue", MicroSoft Yahei, Arial, sans-serif;
+    color: #c5fafe;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+}
+
+.slimScrollDiv_list {
+    position: absolute;
+    overflow: hidden;
+    width: 356px;
+    height: 580px;
+    top: 160px;
+}
+
+#devList_area {
+    width: 435px;
+    height: 100%;
+    z-index: 200;
+    position: absolute;
+    text-align: left;
+}
+
+.bg {
+    background: url(../../lib/img/background_transparent.png);
+}
+
+#devList {
+    margin-left: 30px;
+}
+
+#leftPanel {
+    background-image: url(../../lib/img/left_flag.png);
+    position: absolute;
+    width: 26px;
+    height: 1017px;
+    margin-top: 46px;
+}
+
+.devTotal {
+    margin-left: 10px;
+    overflow: hidden;
+}
+
+.devTotal_header {
+    background: url(../../lib/img/deviceList_top2.png) no-repeat;
+    width: 356px;
+    height: 102px;
+    position: absolute;
+}
+
+.devTotal_footer {
+    background: url(../../lib/img/deviceList_footer.png) no-repeat;
+    width: 356px;
+    height: 81px;
+    position: absolute;
+}
+
+.devTotal_content {
+    width: 356px;
+    height: auto;
+    /*padding-left: 46px;*/
+    /*margin-left: 46px;*/
+}
+
+.devTotal_content .deviceItem {
+    font-size: 20px;
+    padding-bottom: 15px;
+    padding-left: 46px;
+}
+
+/*设备详情的样式*/
+.devDetails {
+    width: 389px;
+    margin-left: 10px;
+    margin-top: 18px
+}
+
+.devDetails_panel{
+    border-width: 0 1px;
+    border-color: #12fcff;
+    border-style: solid;
+    top: 5px;
+    position: relative;
+    width: 389px;
+}
+
+.devDetails_header, .devDetails_footer {
+    background: url(../../lib/img/devDetils_top.png) no-repeat;
+    width: 391px;
+    height: 5px;
+    position: absolute;
+}
+
+.devDetails_close{
+    background: url(../../lib/img/close_btn_normal.png) no-repeat;
+    width: 18px;
+    height: 19px;
+    float: right;
+    position: relative;
+    top: 2px;
+    right: 10px;
+    margin-bottom:10px;
+}
+
+.devices_header {
+    position: relative;
+    background: url(../../lib/img/devices_name_click.png) no-repeat;
+    width: 421px;
+    height: 81px;
+    margin-top: 21px;
+    margin-bottom: 19px;
+}
+
+.devices_title {
+    font-size: 35px;
+    padding-left: 50px;
+    padding-top: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 250px;
+}
+
+.searchBtn {
+    background: url(../../lib/img/search.png) no-repeat;
+    width: 38px;
+    height: 39px;
+    position: absolute;
+    top: 18px;
+    right: 70px;
+}
+
+.devices_content {
+    text-align: left;
+    padding: 35px 0 65px 46px;
+    line-height: 2;
+    width: 354px;
+    word-break: break-all;
+}
+
+.devices_content > div {
+    padding-right: 20px;
+}
+
+.devices_content > div > img {
+    width: 13px;
+    height: 16px;
+}
+
+.devices_content > div > span {
+    color: #fffd3f;
+    display: inline-block;
+    padding-left: 5px;
+}
+
+#devList .interest_info .interest_info_head {
+    margin: 20px 0;
+    background: url(../../lib/img/catagory_icon.png) no-repeat;
+    width: 93px;
+    height: 30px;
+    text-align: center;
+}
+
+.devTotal_bg {
+    width: 356px;
+    background: url(../../lib/img/deviceList_content.png) repeat-y;
+    margin-top: 102px;
+}
+
+#devList .interest_info .interest_info_body > div {
+    display: inline-block;
+    background: url(../../lib/img/app_container.png) no-repeat;
+    width: 65px;
+    height: 64px;
+    color: #08C5D3;
+    margin-left: 30px;
+    margin-bottom: 25px;
+}
+
+#devList .interest_info .interest_info_body > div > div > img {
+    /*padding: 28px 28px;*/
+    padding: 6px 6px;
+}
+
+.interests_header {
+    font-size: 24px;
+    padding-left: 30px;
+    padding-bottom: 26px;
+}
+
+.interests_header_catagory {
+    background: url(../../lib/img/catagory_element.png) no-repeat;
+    width: 350px;
+    height: 34px;
+    margin-top: -20px;
+    margin-left: 20px;
+}
+
+.interests_content {
+    font-size: 18px;
+    padding-left: 20px;
+}
+
+.interests_content span {
+    display: block;
+    font-size: 16px;
+    color: #bdfaff;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.interests_content .weight_size {
+    font-size: 12px;
+    color: #fffc05;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#devList #backBtn {
+    background-color: #0C7982;
+    color: #c5fafe;
+}
+
+/*.slimScrollDiv_details {*/
+    /*border-width: 0 1px;*/
+    /*border-color: #12fcff;*/
+    /*border-style: solid;*/
+    /*top: 5px;*/
+/*}*/
+
+#devList .search input {
+    font-size: 35px;
+    border: none;
+    width: 95%;
+    padding: 5px;
+    background-color: #0C7982;
+}
+
+.ui-search-btn {
+    background: url(../../lib/img/search.png) no-repeat 0 -142px;
+    background-size: 20px;
+    position: absolute;
+    bottom: 0;
+}
+
+#mapContent {
+    border-left: 1px solid #e9e9e9;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.closePanel {
+    background: url(../../lib/img/close_btn_normal.png) no-repeat;
+    width: 18px;
+    height: 19px;
+}
+
+.zoom_div > img {
+    width: 52px;
+    height: 52px;
+}
+
+.data_div > img {
+    width: 89px;
+    height: 88px;
+}
+
+/**set for marker and infoWindow on map */
+.mapLocation {
+    font-size: 22px;
+    min-height: 37px;
+    border-image: url(../../lib/img/bubble_element.png) 0 0 35 0;
+    border-bottom-width: 15px;
+}
+
+.mapLocation_div {
+    position: absolute;
+    height: 18px;
+    padding: 2px;
+    white-space: nowrap;
+    -moz-user-select: none;
+    font-size: 12px;
+}
+
+/*set the css for markers on map*/
+.mapLocation_marker {
+    position: absolute;
+    background: url("../../lib/img/arriving_location.png") no-repeat;
+    width: 46px;
+    height: 46px;
+    overflow: hidden;
+}
+
+/*set the css of the sub-image above the markers on map*/
+.mapLocation_subbg {
+    position: absolute;
+    top: -32px;
+    left: 14px;
+    display: none;
+    background: url("../../lib/img/bubble_element.png") no-repeat;
+    width: 182px;
+    height: 37px;
+}
+
+/*设置地图上marker 和到达次数的样式*/
+.mapLocation_count {
+    /*position: absolute;*/
+    position: relative;
+    top: -200px;
+    left: -65px;
+}
+
+.mapLocation_content {
+    background: url("../../lib/img/arriving_count_content.png") repeat-y;
+    width: 177px;
+    height: auto;
+    text-align: center;
+    /*margin-top: 27px;*/
+    position: relative;
+}
+
+.mapLocation_top {
+    position: absolute;
+    background: url("../../lib/img/arriving_count_top.png") no-repeat;
+    width: 177px;
+    height: 27px;
+}
+
+.mapLocation_footer {
+    background: url("../../lib/img/arriving_count_footer.png") no-repeat;
+    position: absolute;
+    width: 177px;
+    height: 61px;
+}
+
+.maplocationItem {
+    font-size: 18px;
+    color: #ffffff;
+    padding-bottom: 5px;
+    padding-top: 10px;
+}
+
+.maplocationItem > span {
+    display: block;
+    height: 25px;
+}

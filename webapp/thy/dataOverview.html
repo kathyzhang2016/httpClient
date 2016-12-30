@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
+    <link href="../lib/css/overview.css" rel="stylesheet">
+    <link rel="stylesheet" href="../lib/css/jquery.fullPage.css">
+    <title>修改年月日信息</title>
+</head>
+<div class="topPanel">
+    <img src="../lib/img/market/timeCtr_bg.png">
+    <div class="dateSelect">
+        <div class="yearSelect">
+            <div id="yearOption">
+                <span>2015</span>
+                <img src="../lib/img/market/timeCtr_pop_btn.png">
+                <div class="yearArea hidden">
+                    <ul>
+                        <li>2014</li>
+                        <li>2015</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <div class="monthScroll">
+            <div class="prev"></div>
+            <div class="next"></div>
+            <div class="monthList">
+                <ul>
+                    <li>01</li>
+                    <li>02</li>
+                    <li>03</li>
+                    <li>04</li>
+                    <li>05</li>
+                    <li>06</li>
+                    <li>07</li>
+                    <li>08</li>
+                    <li>09</li>
+                    <li>10</li>
+                    <li>11</li>
+                    <li>12</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="close_btn"></div>
+</div>
+
+<div class="chartsContainer">
+    <div class="chartsPanel section">
+        <div class="chart_left" id="citiesPanel">
+            <!--<div><span>常驻城市</span></div>-->
+            <div id="citiesChartLabel">
+            </div>
+            <div id="citiesChartPer"></div>
+            <div id="citiesBgChart"></div>
+            <div id="citiesChart"></div>
+
+        </div>
+
+        <div class="chart_right" id="citiesScatter"></div>
+    </div>
+    <div id="agePanel" class="chartsPanel section"></div>
+    <div id="appPanel" class="chartsPanel section"></div>
+</div>
+
+<script src="../lib/js/jquery/jquery.js"></script>
+<script src="../lib/js/jquery/jquery.min.js"></script>
+<script src="../lib/js/seajs/sea.js"></script>
+<script src="../lib/js/echarts/echarts.min.js"></script>
+<script src="../lib/js/echarts/echarts.js"></script>
+<script src="../lib/js/echarts/china.js"></script>
+
+<script src="../lib/js/fullPage/jquery.easings.min.js"></script>
+<script src="../lib/js/fullPage/jquery.fullPage.min.js"></script>
+<script src="../lib/js/fullPage/jquery.slimscroll.min.js"></script>
+
+<script type="text/javascript">
+    window.dataOverview = {};
+    seajs.use('../thy/js/dataOverview.js', function (main) {
+        // main.createCharts();
+        dataOverview = new main();
+    });
+</script>
+
+</body>
+</html>

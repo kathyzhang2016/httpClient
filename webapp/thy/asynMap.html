@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
+    <link href="../lib/css/panel.css" rel="stylesheet">
+    <link href="../lib/css/overview.css" rel="stylesheet">
+    <link href="../lib/css/animate.min.css" rel="stylesheet">
+    <title>设备信息</title>
+</head>
+<body>
+<div class="main">
+    <div id="devList_area">
+        <div id="devList">
+            <div class="devices_header">
+                <div class="devices_title"></div>
+                <div class="searchBtn"></div>
+            </div>
+            <div class="devDetails hidden">
+                <div class="devDetails_header"></div>
+                <div class="devDetails_panel">
+                    <div class="devDetails_close"></div>
+                    <div class="devDetails_content"></div>
+                </div>
+
+                <div class="devDetails_footer"></div>
+            </div>
+
+            <div class="devTotal hidden">
+                <div class="devTotal_header"></div>
+                <div class="devTotal_bg"></div>
+                <div class="devTotal_content"></div>
+                <div class="devTotal_footer"></div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div id="mapContent">
+        <div id="allmap"></div>
+    </div>
+
+</div>
+<div class="hidden totalContainer">
+    <div class="topPanel">
+        <div class="dateSelect">
+            <div class="yearSelect">
+                <div id="yearOption">
+                    <span>2015</span>
+                    <img src="../lib/img/market/timeCtr_pop_btn.png">
+                    <div class="yearArea hidden">
+                        <ul>
+                            <li>2014</li>
+                            <li>2015</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="monthScroll">
+                <div class="prev"></div>
+                <div class="next"></div>
+                <div class="monthList">
+                    <ul>
+                        <li>01</li>
+                        <li>02</li>
+                        <li>03</li>
+                        <li>04</li>
+                        <li>05</li>
+                        <li>06</li>
+                        <li>07</li>
+                        <li>08</li>
+                        <li>09</li>
+                        <li>10</li>
+                        <li>11</li>
+                        <li>12</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="close_btn"></div>
+    </div>
+
+    <div class="chartsContainer">
+        <div class="chartsPanel citiesView section">
+            <div id="citiesPanel">
+                <div id="citiesChartLabel">
+                </div>
+                <div id="citiesChartNum"></div>
+                <div id="citiesChartPer"></div>
+                <!--<div id="citiesBgChart"></div>-->
+                <div id="citiesBg"></div>
+                <div id="citiesChart"></div>
+
+            </div>
+
+            <div id="citiesScatter"></div>
+        </div>
+        <div id="agePanel" class="chartsPanel agePanel section">
+            <div id="ageCharts"></div>
+        </div>
+        <div class="chartsPanel section">
+            <div id="interestsPanel" class="consumeBg">
+                <ul class="tabs">
+                    <li id="tab1" class="li_opacity_big">消费分布</li>
+                    <li id="tab2">APP 分布</li>
+                    <li id="tab3">常去场所</li>
+                </ul>
+                <div class='tab_content'>
+                    <div id="consumeCharts"></div>
+                    <div id="appCharts" class="tab-content"></div>
+                    <div id="locationCharts" class="tab-content"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="totalContainer_bg hidden"></div>
+
+<script type="text/javascript" th:inline="javascript">
+    /*<![CDATA[*/
+    var ctx = [[${ctx}]];
+    /*]]>*/
+    console.log(ctx);
+</script>
+<script src="../lib/js/jquery/jquery.js"></script>
+<script src="../lib/js/jquery/jquery.min.js"></script>
+<script src="../lib/js/seajs/sea.js"></script>
+<!--<script src="../lib/js/echarts/echarts.min.js"></script>-->
+<script src="../lib/js/echarts/echarts.js"></script>
+<script src="../lib/js/echarts/china.js"></script>
+
+<script src="../lib/js/fullPage/jquery.easings.min.js"></script>
+<script src="../lib/js/fullPage/jquery.fullPage.min.js"></script>
+<script src="../lib/js/fullPage/jquery.slimscroll.min.js"></script>
+<script src="../lib/js/slimscroll/jquery.slimscroll.min.js"></script>
+<script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=Ovx4AP7GZWAQEK8GGccPNdiMcAHX5pBN"></script>
+<script src="../lib/js/seajs/sea.js"></script>
+<script type="text/javascript">
+    console.log(ctx);
+    window.map = new BMap.Map("allmap");
+    window.public = {};//定义全局对象来存储模块化的实例
+    seajs.use('../thy/js/main.js', function (main) {
+        main.initMap();
+    });
+</script>
+</body>
+</html>
